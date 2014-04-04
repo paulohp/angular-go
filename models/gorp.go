@@ -32,6 +32,8 @@ func init() {
     Dbm.TypeConverter = CustomTypeConverter{}
 
     
+    Dbm.AddTableWithName(Jobs{}, "jobs").SetKeys(true, "Id")
+    
 
     //Dbm.TraceOn("[gorp]", r.INFO)
     err = Dbm.CreateTablesIfNotExists()

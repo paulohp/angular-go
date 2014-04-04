@@ -1,14 +1,14 @@
 package main
 
 import (
-    "github.com/paulohp/angular-go/models"
-    "github.com/paulohp/angular-go/routes"
+    "./models"
+    "./routes"
     //"log"
     "net/http"
     "regexp"
     "strings"
     "github.com/codegangsta/martini"
-    
+    "github.com/codegangsta/martini-contrib/binding"
     "github.com/coopernurse/gorp"
 )
 
@@ -24,6 +24,12 @@ func init() {
     m.Use(MapEncoder)
     // Setup routes
     r := martini.NewRouter()
+    
+    r.Get(`/angs-go/jobs`, routes.GetJobs)
+    r.Get(`/angs-go/jobs/:id`, routes.GetJobs)
+    r.Post(`/angs-go/jobs`, binding.Json(models.Jobs{}), routes.AddJobs)
+    r.Put(`/angs-go/jobs/:id`, binding.Json(models.Jobs{}), routes.UpdateJobs)
+    r.Delete(`/angs-go/jobs/:id`, routes.DeleteJobs)
     
     // Inject database
     m.MapTo(models.Dbm, (*gorp.SqlExecutor)(nil))

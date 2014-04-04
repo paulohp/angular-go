@@ -1,5 +1,72 @@
 {
 	"baseName": "angs-go",
-	"entities": [],
+	"entities": [
+		{
+			"name": "jobs",
+			"attrs": [
+				{
+					"attrName": "title",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "apply_email",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "company_description",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "company_name",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "contact",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "description",
+					"attrType": "String",
+					"attrImplType": "string",
+					"minLength": "",
+					"maxLength": "",
+					"enumValues": [],
+					"required": true
+				},
+				{
+					"attrName": "terms",
+					"attrType": "Boolean",
+					"attrImplType": "bool",
+					"enumValues": [],
+					"required": true
+				}
+			]
+		}
+	],
 	"resources": []
 }
