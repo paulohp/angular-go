@@ -1,8 +1,8 @@
 package main
 
 import (
-    "./models"
-    "./routes"
+    "github.com/paulohp/angular-go/models"
+    "github.com/paulohp/angular-go/routes"
     //"log"
     "net/http"
     "regexp"
